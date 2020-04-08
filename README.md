@@ -2,6 +2,21 @@
 
 Simple jekyll `pre_render` hook to add ordered number to headings.
 
+## Config
+
+By default, the plugin will attempt to modify pages, posts, and documents. To specify custom jekyll file types, modify your site's `_config.yml`
+
+```yaml
+
+# _config.yml
+
+numbered_headings:
+  hooks:
+    - guides
+    - specs
+    - my_custom_docs
+```
+
 ## Requirement
 
 It's tested only on jekyll 3.3.1.
