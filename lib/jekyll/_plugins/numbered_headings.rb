@@ -26,8 +26,9 @@ Jekyll::Hooks.register hooks, :pre_render do |article|
 
     levels_string = ''
     (0..(level - 1)).each do |l|
-      levels_string += "#{levels[l]}." if levels[l] > 0
+      levels_string += "#{levels[l]}." if levels[l].positive?
     end
+
     "#{heading} #{levels_string} #{text}"
   end
 
